@@ -332,14 +332,14 @@ void OCLLaBr3::SetOpticalProperties() {
 	G4double ScintEnergy[nEntries] = {3.26*eV,3.44*eV};
 	G4double ScintFast[nEntries] = {1.0,1.0};
 
-	LaBr3MPT->AddProperty("FASTCOMPONENT",
+	LaBr3MPT->AddProperty("SCINTILLATIONCOMPONENT1",
 						  ScintEnergy,
 						  ScintFast,
 						  nEntries);
 
 	LaBr3MPT->AddConstProperty("RESOLUTIONSCALE",1.);
-	LaBr3MPT->AddConstProperty("FASTTIMECONSTANT",20.*ns);
-	LaBr3MPT->AddConstProperty("YIELDRATIO",1.);
+	LaBr3MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",20.*ns);
+	LaBr3MPT->AddConstProperty("SCINTILLATIONYIELD1",1.);
 	LaBr3MPT->AddConstProperty("SCINTILLATIONYIELD",63./keV);     // manifact. info
 
 	LaBr3_Ce->SetMaterialPropertiesTable(LaBr3MPT);
